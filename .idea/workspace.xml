@@ -1,49 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5b77fc3e-a82b-4960-a4bf-c5e5d75a47f0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/CapstoneBackend.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/7a3d04a1-7f5d-40de-b00d-0716391261de.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/constants.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/access/AddressDao.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/access/AssessmentDao.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/access/BaseDao.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/access/CourseDao.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/access/Database.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/access/FacultyDao.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/access/PDOable.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/access/StudentDao.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/access/TermDao.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/model/Address.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/model/Assessment.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/model/Course.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/model/Faculty.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/model/Image.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/model/Person.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/model/Student.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/model/Term.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/Log.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rest/AddressRequestProcessor.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rest/AssessmentRequestProcessor.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rest/CourseRequestProcessor.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rest/FacultyRequestProcessor.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rest/Response.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rest/RouteProcessor.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rest/StudentRequestProcessor.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rest/TermRequestProcessor.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sql/create_tables.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/util/DBPopulator.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/util/DBResetter.php" afterDir="false" />
+    <list default="true" id="5b77fc3e-a82b-4960-a4bf-c5e5d75a47f0" name="Default Changelist" comment="Application is in a working state.&#10;Alpha release">
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/tomas.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/php-test-framework.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/access/DocumentDao.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/access/NoteDao.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/access/ReportDao.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/access/UserDao.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/model/Note.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/model/TermCourse.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rest/BaseRequestProcessor.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rest/LoginRequestProcessor.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rest/NoteRequestProcessor.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rest/ReportRequestProcessor.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rest/RequestProcessor.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rest/UniversityRequestProcessor.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sql/create_views.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sql/drop_tables.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sql/read_operations.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sql/write_operations.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7a3d04a1-7f5d-40de-b00d-0716391261de.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7a3d04a1-7f5d-40de-b00d-0716391261de.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/constants.php" beforeDir="false" afterPath="$PROJECT_DIR$/constants.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/access/AddressDao.php" beforeDir="false" afterPath="$PROJECT_DIR$/data/access/AddressDao.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/access/AssessmentDao.php" beforeDir="false" afterPath="$PROJECT_DIR$/data/access/AssessmentDao.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/access/BaseDao.php" beforeDir="false" afterPath="$PROJECT_DIR$/data/access/BaseDao.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/access/CourseDao.php" beforeDir="false" afterPath="$PROJECT_DIR$/data/access/CourseDao.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/access/Database.php" beforeDir="false" afterPath="$PROJECT_DIR$/data/access/Database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/access/FacultyDao.php" beforeDir="false" afterPath="$PROJECT_DIR$/data/access/FacultyDao.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/access/PDOable.php" beforeDir="false" afterPath="$PROJECT_DIR$/data/access/PDOable.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/access/StudentDao.php" beforeDir="false" afterPath="$PROJECT_DIR$/data/access/StudentDao.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/access/TermDao.php" beforeDir="false" afterPath="$PROJECT_DIR$/data/access/TermDao.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/model/Address.php" beforeDir="false" afterPath="$PROJECT_DIR$/data/model/Address.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/model/Assessment.php" beforeDir="false" afterPath="$PROJECT_DIR$/data/model/Assessment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/model/Course.php" beforeDir="false" afterPath="$PROJECT_DIR$/data/model/Course.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/model/Faculty.php" beforeDir="false" afterPath="$PROJECT_DIR$/data/model/Faculty.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/model/Image.php" beforeDir="false" afterPath="$PROJECT_DIR$/data/model/Image.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/model/Person.php" beforeDir="false" afterPath="$PROJECT_DIR$/data/model/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/model/Student.php" beforeDir="false" afterPath="$PROJECT_DIR$/data/model/Student.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/model/Term.php" beforeDir="false" afterPath="$PROJECT_DIR$/data/model/Term.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/Log.php" beforeDir="false" afterPath="$PROJECT_DIR$/log/Log.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/AddressRequestProcessor.php" beforeDir="false" afterPath="$PROJECT_DIR$/rest/AddressRequestProcessor.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/AssessmentRequestProcessor.php" beforeDir="false" afterPath="$PROJECT_DIR$/rest/AssessmentRequestProcessor.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/CourseRequestProcessor.php" beforeDir="false" afterPath="$PROJECT_DIR$/rest/CourseRequestProcessor.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/FacultyRequestProcessor.php" beforeDir="false" afterPath="$PROJECT_DIR$/rest/FacultyRequestProcessor.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/Response.php" beforeDir="false" afterPath="$PROJECT_DIR$/rest/Response.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/RouteProcessor.php" beforeDir="false" afterPath="$PROJECT_DIR$/rest/RouteProcessor.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/StudentRequestProcessor.php" beforeDir="false" afterPath="$PROJECT_DIR$/rest/StudentRequestProcessor.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/TermRequestProcessor.php" beforeDir="false" afterPath="$PROJECT_DIR$/rest/TermRequestProcessor.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sql/create_tables.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/create_tables.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/DBPopulator.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/DBResetter.php" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -51,9 +61,9 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings">
+  <component name="ComposerSettings" synchronizationState="DONT_SYNCHRONIZE">
     <execution>
-      <executable />
+      <phar pharPath="C:\Users\tomas\OneDrive\Documents\School\WGU\Fourth Term\C868 - Capstone\Task 2\CapstoneBackend\composer.phar" interpreterId="53dfd63c-b329-40c8-917f-92342dd138d2" />
     </execution>
   </component>
   <component name="DatabaseView">
@@ -72,6 +82,31 @@
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="WOPR" type="feb32156:DbDataSourceImpl" />
       </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="WOPR" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="WOPR" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="capstone: schema" type="ebfa3cd1:MariaImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="WOPR" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="capstone: schema" type="ebfa3cd1:MariaImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="WOPR" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="capstone: schema" type="ebfa3cd1:MariaImplModel$Schema" />
+        <item name="views" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
     </expand>
     <select />
   </component>
@@ -81,13 +116,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/access/AssessmentDao.php">
+        <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
-              <folding>
-                <element signature="e#28#36#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="359">
+              <caret line="30" column="16" lean-forward="true" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -95,102 +127,56 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data/model/Assessment.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" selection-start-line="16" selection-end-line="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/7a3d04a1-7f5d-40de-b00d-0716391261de/console.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="20" lean-forward="true" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/model/Course.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2465">
-              <caret line="194" column="44" selection-start-line="194" selection-start-column="44" selection-end-line="194" selection-end-column="44" />
+            <state relative-caret-position="193">
+              <caret line="111" column="33" selection-start-line="111" selection-start-column="33" selection-end-line="111" selection-end-column="33" />
               <folding>
-                <element signature="e#313#345#0#PHP" />
-                <element signature="e#350#424#0#PHP" />
-                <element signature="e#430#494#0#PHP" />
-                <element signature="e#499#611#0#PHP" />
-                <element signature="e#617#649#0#PHP" />
-                <element signature="e#654#721#0#PHP" />
-                <element signature="e#727#787#0#PHP" />
-                <element signature="e#792#889#0#PHP" />
-                <element signature="e#895#927#0#PHP" />
-                <element signature="e#932#1014#0#PHP" />
-                <element signature="e#1020#1088#0#PHP" />
-                <element signature="e#1227#1259#0#PHP" />
-                <element signature="e#1264#1335#0#PHP" />
-                <element signature="e#1341#1403#0#PHP" />
-                <element signature="e#1408#1513#0#PHP" />
-                <element signature="e#1519#1551#0#PHP" />
-                <element signature="e#1556#1632#0#PHP" />
+                <element signature="e#372#450#0#PHP" />
+                <element signature="e#455#557#0#PHP" />
+                <element signature="e#562#632#0#PHP" />
+                <element signature="e#637#723#0#PHP" />
+                <element signature="e#728#791#0#PHP" />
+                <element signature="e#796#867#0#PHP" />
+                <element signature="e#872#933#0#PHP" />
+                <element signature="e#938#1020#0#PHP" />
+                <element signature="e#1095#1329#0#PHP" />
+                <element signature="e#1185#1323#0#PHP" />
+                <element signature="e#1253#1323#0#PHP" />
+                <element signature="e#1334#1397#0#PHP" />
+                <element signature="e#1402#1496#0#PHP" />
+                <element signature="e#1501#1683#0#PHP" />
+                <element signature="e#1780#2088#0#PHP" />
+                <element signature="e#2094#2485#0#PHP" />
+                <element signature="e#2228#2478#0#PHP" />
+                <element signature="e#2491#2783#0#PHP" />
+                <element signature="e#3067#3326#0#PHP" />
+                <element signature="e#3339#3661#0#PHP" />
+                <element signature="e#3539#3626#0#PHP" />
+                <element signature="e#3786#3904#0#PHP" />
+                <element signature="e#3839#3897#0#PHP" />
+                <element signature="e#3910#4097#0#PHP" />
+                <element signature="e#4103#4167#0#PHP" />
+                <element signature="e#4318#4388#0#PHP" />
+                <element signature="e#4394#4426#0#PHP" />
+                <element signature="e#4431#4498#0#PHP" />
+                <element signature="e#4504#4572#0#PHP" />
+                <element signature="e#4577#4674#0#PHP" />
+                <element signature="e#4680#4712#0#PHP" />
+                <element signature="e#4717#4796#0#PHP" />
+                <element signature="e#4802#4876#0#PHP" />
+                <element signature="e#4881#5002#0#PHP" />
+                <element signature="e#5008#5040#0#PHP" />
+                <element signature="e#5045#5122#0#PHP" />
+                <element signature="e#5128#5201#0#PHP" />
+                <element signature="e#5206#5323#0#PHP" />
+                <element signature="e#5329#5361#0#PHP" />
+                <element signature="e#5366#5445#0#PHP" />
+                <element signature="e#5451#5525#0#PHP" />
+                <element signature="e#5530#5651#0#PHP" />
+                <element signature="e#5657#5689#0#PHP" />
+                <element signature="e#5694#5775#0#PHP" />
+                <element signature="e#5781#5856#0#PHP" />
+                <element signature="e#5861#5986#0#PHP" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/model/Student.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="54" selection-start-line="17" selection-start-column="54" selection-end-line="17" selection-end-column="54" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/model/Person.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="30" selection-start-line="4" selection-start-column="30" selection-end-line="5" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/access/StudentDao.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
-              <caret line="36" column="22" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="22" />
-              <folding>
-                <element signature="e#28#36#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rest/StudentRequestProcessor.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="36" column="36" selection-start-line="36" selection-start-column="36" selection-end-line="36" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rest/AssessmentRequestProcessor.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="32" column="49" selection-start-line="32" selection-start-column="49" selection-end-line="32" selection-end-column="49" />
             </state>
           </provider>
         </entry>
@@ -198,25 +184,22 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data/model/Term.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1258">
-              <caret line="122" column="10" selection-start-line="122" selection-start-column="10" selection-end-line="122" selection-end-column="10" />
+            <state relative-caret-position="187">
+              <caret line="13" column="22" lean-forward="true" selection-start-line="13" selection-start-column="22" selection-end-line="14" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/rest/StudentRequestProcessor.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="30" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
               <folding>
-                <element signature="e#195#227#0#PHP" />
-                <element signature="e#232#302#0#PHP" />
-                <element signature="e#308#368#0#PHP" />
-                <element signature="e#373#477#0#PHP" />
-                <element signature="e#483#515#0#PHP" />
-                <element signature="e#520#587#0#PHP" />
-                <element signature="e#593#651#0#PHP" />
-                <element signature="e#656#753#0#PHP" />
-                <element signature="e#759#791#0#PHP" />
-                <element signature="e#796#872#0#PHP" />
-                <element signature="e#878#941#0#PHP" />
-                <element signature="e#946#1062#0#PHP" />
-                <element signature="e#1068#1100#0#PHP" />
-                <element signature="e#1105#1177#0#PHP" />
-                <element signature="e#1183#1244#0#PHP" />
-                <element signature="e#1249#1357#0#PHP" />
+                <element signature="e#1729#5102#0#PHP" />
+                <element signature="e#5647#6204#0#PHP" />
+                <element signature="e#6271#9278#0#PHP" />
+                <element signature="e#9347#11361#0#PHP" />
               </folding>
             </state>
           </provider>
@@ -224,74 +207,132 @@
       </file>
     </leaf>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>private static $</find>
-      <find>null</find>
-      <find>uniqid</find>
-      <find>$this-&gt;start_date</find>
-      <find>Date:</find>
+      <find>could not</find>
+      <find>php:</find>
+      <find>jsonse</find>
+      <find>d</find>
+      <find>setBody</find>
+      <find>queryS</find>
+      <find>responseText</find>
+      <find>lorem</find>
+      <find>'POST'</find>
+      <find>User attempted to connect to invalid</find>
+      <find>serializing</find>
+      <find>got ass</find>
+      <find>.</find>
+      <find>create cou</find>
+      <find>create</find>
+      <find>RESPONSE CODE</find>
+      <find>adding course</find>
+      <find>course_num</find>
+      <find>courseNum</find>
+      <find>stud</find>
+      <find>association for</find>
+      <find>remo</find>
+      <find>UUID</find>
+      <find>courses da</find>
+      <find>associating</find>
+      <find>remove_mentor</find>
+      <find>comparing</find>
+      <find>getting asses</find>
+      <find>courses for term</find>
+      <find>associating cou</find>
     </findStrings>
     <replaceStrings>
       <replace>const</replace>
       <replace>generateUUID</replace>
       <replace>$time_str</replace>
+      <replace>public</replace>
+      <replace>$method</replace>
+      <replace>Image</replace>
+      <replace>Student</replace>
+      <replace>student</replace>
+      <replace>protected</replace>
+      <replace>Log::s</replace>
+      <replace>private</replace>
+      <replace>value</replace>
+      <replace>h</replace>
+      <replace>+</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Course.php" />
-        <option value="$PROJECT_DIR$/log.php" />
-        <option value="$PROJECT_DIR$/RouteProcessor.php" />
-        <option value="$PROJECT_DIR$/Route.php" />
-        <option value="$PROJECT_DIR$/model/Route.php" />
-        <option value="$PROJECT_DIR$/model/Course.php" />
-        <option value="$PROJECT_DIR$/data/BaseDao.php" />
-        <option value="$PROJECT_DIR$/data/CourseDao.php" />
-        <option value="$PROJECT_DIR$/data/access/BaseDao.php" />
-        <option value="$PROJECT_DIR$/data/Database.php" />
-        <option value="$PROJECT_DIR$/data/access/PDOable.php" />
-        <option value="$PROJECT_DIR$/constants.php" />
-        <option value="$PROJECT_DIR$/sql/DBPopulator.php" />
-        <option value="$PROJECT_DIR$/data/model/Image.php" />
-        <option value="$PROJECT_DIR$/data/model/Student.php" />
-        <option value="$PROJECT_DIR$/util/DBResetter.php" />
-        <option value="$PROJECT_DIR$/data/model/Address.php" />
-        <option value="$PROJECT_DIR$/data/model/Route.php" />
-        <option value="$PROJECT_DIR$/Log.php" />
-        <option value="$PROJECT_DIR$/log/Log.php" />
+        <option value="$PROJECT_DIR$/sql/operations.sql" />
+        <option value="$PROJECT_DIR$/sql/read_operations.sql" />
+        <option value="$PROJECT_DIR$/sql/write_operations.sql" />
+        <option value="$PROJECT_DIR$/sql/drop_tables2.sql" />
+        <option value="$PROJECT_DIR$/util/create_users.html" />
+        <option value="$PROJECT_DIR$/util/create_admin.php" />
+        <option value="$PROJECT_DIR$/sql/create_tables2.sql" />
         <option value="$PROJECT_DIR$/rest/RouteProcessor.php" />
-        <option value="$PROJECT_DIR$/data/access/Database.php" />
-        <option value="$PROJECT_DIR$/rest/Response.php" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
-        <option value="$PROJECT_DIR$/rest/TermRequestProcessor.php" />
-        <option value="$PROJECT_DIR$/data/access/CourseDao.php" />
-        <option value="$PROJECT_DIR$/data/access/TermDao.php" />
-        <option value="$PROJECT_DIR$/util/DBPopulator.php" />
-        <option value="$PROJECT_DIR$/sql/create_tables.sql" />
-        <option value="$PROJECT_DIR$/data/access/FacultyDao.php" />
-        <option value="$PROJECT_DIR$/rest/FacultyRequestProcessor.php" />
-        <option value="$PROJECT_DIR$/data/model/Faculty.php" />
-        <option value="$PROJECT_DIR$/data/model/Person.php" />
         <option value="$PROJECT_DIR$/data/access/AddressDao.php" />
-        <option value="$PROJECT_DIR$/rest/AddressRequestProcessor.php" />
-        <option value="$PROJECT_DIR$/rest/AssessmentRequestProcessor.php" />
-        <option value="$PROJECT_DIR$/rest/CourseRequestProcessor.php" />
-        <option value="$PROJECT_DIR$/data/model/Term.php" />
-        <option value="$PROJECT_DIR$/data/model/Course.php" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/7a3d04a1-7f5d-40de-b00d-0716391261de/console.sql" />
-        <option value="$PROJECT_DIR$/data/access/StudentDao.php" />
-        <option value="$PROJECT_DIR$/rest/StudentRequestProcessor.php" />
-        <option value="$PROJECT_DIR$/data/access/AssessmentDao.php" />
+        <option value="$PROJECT_DIR$/util/dash_stubs.html" />
+        <option value="$PROJECT_DIR$/constants.php" />
+        <option value="$PROJECT_DIR$/data/access/DocumentDao.php" />
+        <option value="$PROJECT_DIR$/rest/Response.php" />
+        <option value="$PROJECT_DIR$/rest/UniversityRequestProcessor.php" />
+        <option value="$PROJECT_DIR$/sql/create_tables.sql" />
+        <option value="$PROJECT_DIR$/sql/read_operations.php" />
+        <option value="$PROJECT_DIR$/data/access/ReportDao.php" />
+        <option value="$PROJECT_DIR$/rest/RequestProcessor.php" />
+        <option value="$PROJECT_DIR$/rest/ReportRequestProcessor.php" />
+        <option value="$PROJECT_DIR$/rest/NoteRequestProcessor.php" />
+        <option value="$PROJECT_DIR$/rest/TermRequestProcessor.php" />
+        <option value="$PROJECT_DIR$/data/model/Note.php" />
         <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/rest/FacultyRequestProcessor.php" />
+        <option value="$PROJECT_DIR$/sql/write_operations.php" />
+        <option value="$PROJECT_DIR$/data/access/CourseDao.php" />
+        <option value="$PROJECT_DIR$/rest/AssessmentRequestProcessor.php" />
+        <option value="$PROJECT_DIR$/data/access/AssessmentDao.php" />
+        <option value="$PROJECT_DIR$/data/access/FacultyDao.php" />
+        <option value="$PROJECT_DIR$/data/model/TermCourse.php" />
+        <option value="$PROJECT_DIR$/data/access/ImageDao.php" />
+        <option value="$PROJECT_DIR$/rest/AddressRequestProcessor.php" />
+        <option value="$PROJECT_DIR$/data/access/StudentDao.php" />
+        <option value="$PROJECT_DIR$/rest/CourseRequestProcessor.php" />
+        <option value="$PROJECT_DIR$/data/access/TermDao.php" />
+        <option value="$PROJECT_DIR$/sql/create_views.sql" />
+        <option value="$PROJECT_DIR$/rest/LoginRequestProcessor.php" />
+        <option value="$PROJECT_DIR$/data/access/UserDao.php" />
+        <option value="$PROJECT_DIR$/log/Log.php" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
+        <option value="$PROJECT_DIR$/data/model/Student.php" />
+        <option value="$PROJECT_DIR$/data/model/Faculty.php" />
+        <option value="$PROJECT_DIR$/data/access/PDOable.php" />
+        <option value="$PROJECT_DIR$/data/model/User.php" />
+        <option value="$PROJECT_DIR$/data/model/Address.php" />
+        <option value="$PROJECT_DIR$/data/model/Course.php" />
         <option value="$PROJECT_DIR$/data/model/Assessment.php" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/7a3d04a1-7f5d-40de-b00d-0716391261de/console.sql" />
+        <option value="$PROJECT_DIR$/data/access/CourseDaoTest.php" />
+        <option value="$PROJECT_DIR$/data/model/Term.php" />
+        <option value="$PROJECT_DIR$/rest/StudentRequestProcessor.php" />
       </list>
     </option>
   </component>
+  <component name="PhpServers">
+    <servers />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="1912" />
     <option name="y" value="-8" />
@@ -306,59 +347,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="CapstoneBackend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CapstoneBackend" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CapstoneBackend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CapstoneBackend" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CapstoneBackend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CapstoneBackend" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="access" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CapstoneBackend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CapstoneBackend" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CapstoneBackend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CapstoneBackend" type="462c0819:PsiDirectoryNode" />
-              <item name="rest" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CapstoneBackend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CapstoneBackend" type="462c0819:PsiDirectoryNode" />
-              <item name="sql" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CapstoneBackend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
-            </path>
-            <path>
-              <item name="CapstoneBackend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
-              <item name="Database Consoles" type="d62648e6:ScratchProjectViewPane$MyRootNode" />
-            </path>
-            <path>
-              <item name="CapstoneBackend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
-              <item name="Database Consoles" type="d62648e6:ScratchProjectViewPane$MyRootNode" />
-              <item name="7a3d04a1-7f5d-40de-b00d-0716391261de" type="1e004dc1:ScratchProjectViewPane$MyRootNode$1$1" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="Scope">
         <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
           <expand>
@@ -380,10 +368,33 @@
           <select />
         </subPane>
       </pane>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="CapstoneBackend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CapstoneBackend" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CapstoneBackend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CapstoneBackend" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CapstoneBackend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CapstoneBackend" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="access" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql&#10;mariadb" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
@@ -392,10 +403,15 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="com.jetbrains.php.lang.actions.generation.PhpGenerateFieldAccessorHandlerBase$MyMemberChooser.fluent.setters.last.selected" value="true" />
-    <property name="database.console.LAST_STATE" value="true" />
+    <property name="com.jetbrains.php.phpunit.codeGeneration.PhpNewTestDialog.defaultLibrary" value="PHPUnit" />
+    <property name="database.console.LAST_STATE" value="false" />
+    <property name="database.data.extractors.current.id" value="Tab-separated (TSV)_id" />
+    <property name="last_opened_file_path" value="C:/Program Files/php/php.exe" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.composer" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -404,6 +420,9 @@
       <recent name="C:\Users\tomas\OneDrive\Documents\School\WGU\Fourth Term\C868 - Capstone\Task 2\CapstoneBackend\util" />
       <recent name="C:\Users\tomas\OneDrive\Documents\School\WGU\Fourth Term\C868 - Capstone\Task 2\CapstoneBackend\data\access" />
       <recent name="C:\Users\tomas\OneDrive\Documents\School\WGU\Fourth Term\C868 - Capstone\Task 2\CapstoneBackend\data" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\tomas\OneDrive\Documents\School\WGU\Fourth Term\C868 - Capstone\Task 2\CapstoneBackend\sql" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -417,6 +436,17 @@
         </RuleState>
       </list>
     </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="CourseDaoTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Capstone\CourseDaoTest" file="$PROJECT_DIR$/data/access/CourseDaoTest.php" scope="Class" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="PHPUnit.CourseDaoTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -443,12 +473,56 @@
       <workItem from="1557844124298" duration="12751000" />
       <workItem from="1557935401781" duration="3723000" />
       <workItem from="1557973162473" duration="3378000" />
-      <workItem from="1558118515265" duration="6375000" />
+      <workItem from="1558118515265" duration="11950000" />
+      <workItem from="1558367464048" duration="84261000" />
+      <workItem from="1558890791619" duration="14678000" />
+      <workItem from="1558925805380" duration="20146000" />
+      <workItem from="1559354433624" duration="21116000" />
+      <workItem from="1559607325383" duration="1832000" />
+      <workItem from="1559611410890" duration="36219000" />
+      <workItem from="1559930414550" duration="22408000" />
+      <workItem from="1560099337349" duration="63034000" />
+      <workItem from="1560378041593" duration="3775000" />
+      <workItem from="1560440004176" duration="25779000" />
+      <workItem from="1560699538432" duration="16827000" />
+      <workItem from="1560798001219" duration="25157000" />
+      <workItem from="1561050964665" duration="34447000" />
+      <workItem from="1561588778825" duration="1372000" />
+      <workItem from="1561608649807" duration="4490000" />
+      <workItem from="1561849185202" duration="7416000" />
     </task>
+    <task id="LOCAL-00001" summary="Initial commit; application is in partial working state.">
+      <created>1558313933198</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1558313933198</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="CourseDaoTest - 2019.06.29 at 18h 08m 44s.xml">
+      <configuration name="CourseDaoTest" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="CourseDaoTest - 2019.06.29 at 18h 08m 55s.xml">
+      <configuration name="CourseDaoTest" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="CourseDaoTest - 2019.06.29 at 18h 13m 50s.xml">
+      <configuration name="CourseDaoTest" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="CourseDaoTest - 2019.06.29 at 18h 14m 30s.xml">
+      <configuration name="CourseDaoTest" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="CourseDaoTest - 2019.06.29 at 18h 16m 17s.xml">
+      <configuration name="CourseDaoTest" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="CourseDaoTest - 2019.06.29 at 18h 17m 57s.xml">
+      <configuration name="CourseDaoTest" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="155873000" />
+    <option name="totallyTimeSpent" value="544405000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -461,13 +535,15 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.60033166" visible="true" weight="0.15938166" />
-      <window_info id="Structure" order="1" sideWeight="0.39966834" side_tool="true" visible="true" weight="0.15938166" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.5754561" visible="true" weight="0.12793177" />
+      <window_info id="Structure" order="1" sideWeight="0.42454395" side_tool="true" weight="0.17857143" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Database Console" order="0" sideWeight="0.83315563" visible="true" />
+      <window_info anchor="bottom" id="Messages" />
+      <window_info anchor="bottom" id="Database Console" order="0" sideWeight="0.79317695" weight="0.33444443" />
       <window_info anchor="bottom" id="Message" order="1" />
-      <window_info anchor="bottom" id="Find" order="2" />
+      <window_info active="true" anchor="bottom" id="Find" order="2" sideWeight="0.49840087" visible="true" weight="0.3288889" />
       <window_info anchor="bottom" id="Run" order="3" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
@@ -475,24 +551,25 @@
       <window_info anchor="bottom" id="TODO" order="7" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="File Transfer" order="10" sideWeight="0.7489339" />
+      <window_info anchor="bottom" id="File Transfer" order="10" sideWeight="0.74626863" weight="0.32666665" />
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.83315563" weight="0.31333333" />
-      <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.16684435" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.7164179" weight="0.34555554" />
+      <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.36247334" side_tool="true" />
+      <window_info anchor="bottom" id="Inspection Results" order="14" sideWeight="0.63752663" weight="0.3288889" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Remote Host" order="3" weight="0.16311301" />
-      <window_info anchor="right" id="Database" order="4" sideWeight="0.49585405" visible="true" weight="0.19402985" />
-      <window_info anchor="right" x="0" y="0" width="434" height="856" id="Documentation" order="5" sideWeight="0.5041459" side_tool="true" weight="0.20895523" />
+      <window_info anchor="right" id="Database" order="4" sideWeight="0.49460432" weight="0.15351813" />
+      <window_info anchor="right" x="0" y="0" width="434" height="856" id="Documentation" order="5" sideWeight="0.5053957" side_tool="true" weight="0.19402985" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49087894" visible="true" weight="0.18603411" />
-      <window_info id="Structure" order="1" sideWeight="0.50912106" side_tool="true" visible="true" weight="0.18603411" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.57929885" visible="true" weight="0.17697228" />
+      <window_info id="Structure" order="1" sideWeight="0.42070118" side_tool="true" visible="true" weight="0.17697228" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Database Console" order="0" sideWeight="0.8336887" visible="true" />
+      <window_info active="true" anchor="bottom" id="Database Console" order="0" sideWeight="0.79317695" visible="true" weight="0.33444443" />
       <window_info anchor="bottom" id="Message" order="1" />
-      <window_info anchor="bottom" id="Find" order="2" />
+      <window_info anchor="bottom" id="Find" order="2" sideWeight="0.49840087" />
       <window_info anchor="bottom" id="Run" order="3" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
@@ -500,307 +577,658 @@
       <window_info anchor="bottom" id="TODO" order="7" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="File Transfer" order="10" />
+      <window_info anchor="bottom" id="File Transfer" order="10" sideWeight="0.74626863" />
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.83315563" weight="0.41777778" />
-      <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.16684435" side_tool="true" weight="0.41777778" />
+      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.7164179" weight="0.38333333" />
+      <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.2835821" side_tool="true" weight="0.47111112" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Remote Host" order="3" weight="0.16311301" />
-      <window_info anchor="right" id="Database" order="4" sideWeight="0.49585405" visible="true" weight="0.20895523" />
-      <window_info anchor="right" x="0" y="0" width="434" height="856" id="Documentation" order="5" sideWeight="0.5041459" side_tool="true" visible="true" weight="0.20895523" />
+      <window_info anchor="right" id="Database" order="4" sideWeight="0.49460432" weight="0.15671642" />
+      <window_info anchor="right" x="0" y="0" width="434" height="856" id="Documentation" order="5" sideWeight="0.5053957" side_tool="true" weight="0.19402985" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial commit; application is in partial working state." />
+    <MESSAGE value="Application is in a working state.&#10;Alpha release" />
+    <option name="LAST_COMMIT_MESSAGE" value="Application is in a working state.&#10;Alpha release" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/data/access/AssessmentDao.php</url>
+          <line>8</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/data/model/Course.php</url>
+          <line>8</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/7a3d04a1-7f5d-40de-b00d-0716391261de/console_1.sql" />
-    <entry file="file://$PROJECT_DIR$/data/access/PDOable.php">
+    <entry file="file://$PROJECT_DIR$/util/posttest.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="35" selection-start-line="6" selection-start-column="35" selection-end-line="6" selection-end-column="35" />
+        <state relative-caret-position="544">
+          <caret line="32" column="33" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/model/Image.php">
+    <entry file="file://$PROJECT_DIR$/sql/read_operations.sql" />
+    <entry file="file://$PROJECT_DIR$/sql/write_operations.sql" />
+    <entry file="file://$PROJECT_DIR$/util/DBPopulator.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1044">
-          <caret line="62" column="5" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
+        <state relative-caret-position="-198">
+          <caret line="118" column="47" lean-forward="true" selection-start-line="118" selection-start-column="47" selection-end-line="118" selection-end-column="47" />
+          <folding>
+            <element signature="e#7937#8220#0#PHP" />
+            <element signature="e#8224#9179#0#PHP" />
+            <element signature="e#8250#8489#0#PHP" />
+            <element signature="e#8336#8459#0#PHP" />
+            <element signature="e#8495#9177#0#PHP" />
+            <element signature="e#9765#10050#0#PHP" />
+            <element signature="e#9851#10020#0#PHP" />
+            <element signature="e#10056#10374#0#PHP" />
+            <element signature="e#11268#11678#0#PHP" />
+            <element signature="e#11685#11955#0#PHP" />
+            <element signature="e#11779#11921#0#PHP" />
+            <element signature="e#12507#13209#0#PHP" />
+            <element signature="e#12534#12769#0#PHP" />
+            <element signature="e#12617#12738#0#PHP" />
+            <element signature="e#12775#13207#0#PHP" />
+            <element signature="e#13235#13248#0#PHP" />
+            <element signature="e#13591#13609#0#PHP" />
+            <element signature="e#14137#14220#0#PHP" />
+            <element signature="e#14366#14578#0#PHP" />
+            <element signature="e#14475#14568#0#PHP" />
+            <element signature="e#14708#14841#0#PHP" />
+            <element signature="e#14968#15048#0#PHP" />
+            <element signature="e#15164#15237#0#PHP" />
+            <element signature="e#15393#15479#0#PHP" />
+            <element signature="e#15624#15701#0#PHP" />
+            <element signature="e#16422#16763#0#PHP" />
+            <element signature="e#16535#16753#0#PHP" />
+            <element signature="e#16868#17024#0#PHP" />
+            <element signature="e#17126#17437#0#PHP" />
+            <element signature="e#17226#17427#0#PHP" />
+            <element signature="e#17543#17694#0#PHP" />
+            <element signature="e#17793#17938#0#PHP" />
+            <element signature="e#18004#18164#0#PHP" />
+            <element signature="e#18227#18381#0#PHP" />
+            <element signature="e#18392#18706#0#PHP" />
+            <element signature="e#18618#18703#0#PHP" />
+            <element signature="e#18708#18929#0#PHP" />
+            <element signature="e#18931#19147#0#PHP" />
+            <element signature="e#19166#19392#0#PHP" />
+            <element signature="e#19334#19392#0#PHP" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/util/DBResetter.php">
+    <entry file="file://$PROJECT_DIR$/util/create_admin.php" />
+    <entry file="file://$PROJECT_DIR$/data/access/DocumentDao.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="42" column="50" selection-start-line="42" selection-start-column="50" selection-end-line="42" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/model/Address.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="521">
-          <caret line="143" column="5" lean-forward="true" selection-start-line="143" selection-start-column="5" selection-end-line="143" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://7a3d04a1-7f5d-40de-b00d-0716391261de/schema/capstone/table/addresses.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
+        <state relative-caret-position="2108">
+          <caret line="125" column="56" selection-start-line="125" selection-start-column="56" selection-end-line="125" selection-end-column="56" />
+          <folding>
+            <element signature="e#27#41#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/constants.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="34" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/log.txt" />
-    <entry file="file://$PROJECT_DIR$/log/Log.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="27" column="37" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/access/BaseDao.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="34" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/access/Database.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rest/RouteProcessor.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-425">
-          <caret line="14" column="58" selection-start-line="14" selection-start-column="58" selection-end-line="14" selection-end-column="58" />
+        <state relative-caret-position="238">
+          <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/rest/Response.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="38" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
+        <state relative-caret-position="408">
+          <caret line="24" column="42" selection-start-line="24" selection-start-column="42" selection-end-line="24" selection-end-column="42" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rest/TermRequestProcessor.php">
+    <entry file="file://$PROJECT_DIR$/rest/ReportRequestProcessor.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="39" selection-start-line="39" selection-end-line="39" />
+        <state relative-caret-position="-384">
+          <caret line="22" column="41" lean-forward="true" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/util/DBPopulator.php">
+    <entry file="file://$PROJECT_DIR$/data/access/ReportDao.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7089">
-          <caret line="418" lean-forward="true" selection-start-line="418" selection-end-line="418" />
+        <state relative-caret-position="459">
+          <caret line="87" column="20" selection-start-line="87" selection-start-column="20" selection-end-line="87" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/util/err.html" />
+    <entry file="file://$PROJECT_DIR$/data/access/NoteDao.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="103" column="40" selection-start-line="103" selection-start-column="40" selection-end-line="103" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/model/Note.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="82" column="39" selection-start-line="82" selection-start-column="39" selection-end-line="82" selection-end-column="39" />
           <folding>
-            <element signature="e#28#45#0#PHP" expanded="true" />
+            <element signature="e#27#48#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sql/create_tables.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="47" selection-start-line="1" selection-start-column="47" selection-end-line="1" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.htaccess">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/rest/FacultyRequestProcessor.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="40" lean-forward="true" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/access/FacultyDao.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="935">
-          <caret line="56" column="67" lean-forward="true" selection-start-line="56" selection-start-column="67" selection-end-line="56" selection-end-column="67" />
+        <state relative-caret-position="388">
+          <caret line="203" column="63" selection-start-line="203" selection-start-column="63" selection-end-line="203" selection-end-column="63" />
           <folding>
-            <element signature="e#27#35#0#PHP" expanded="true" />
+            <element signature="e#631#1518#0#PHP" />
+            <element signature="e#1693#3490#0#PHP" />
+            <element signature="e#3496#3986#0#PHP" />
+            <element signature="e#3992#4513#0#PHP" />
+            <element signature="e#4619#4858#0#PHP" />
+            <element signature="e#4960#6040#0#PHP" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/model/Faculty.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="37" selection-start-line="3" selection-start-column="37" selection-end-line="3" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/access/TermDao.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1020">
-          <caret line="60" selection-start-line="60" selection-end-line="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rest/CourseRequestProcessor.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="47" column="63" selection-start-line="47" selection-start-column="63" selection-end-line="47" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/access/AddressDao.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1139">
-          <caret line="68" column="24" selection-start-line="68" selection-start-column="24" selection-end-line="68" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rest/AddressRequestProcessor.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/data/access/CourseDao.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1003">
-          <caret line="60" column="46" selection-start-line="60" selection-start-column="46" selection-end-line="60" selection-end-column="46" />
+        <state relative-caret-position="-374">
+          <caret line="122" selection-start-line="122" selection-end-line="122" />
           <folding>
-            <element signature="e#28#36#0#PHP" expanded="true" />
+            <element signature="e#28#45#0#PHP" expanded="true" />
+            <element signature="e#221#331#0#PHP" />
+            <element signature="e#337#1056#0#PHP" />
+            <element signature="e#1062#1767#0#PHP" />
+            <element signature="e#1773#2580#0#PHP" />
+            <element signature="e#3809#4354#0#PHP" />
+            <element signature="e#4360#5183#0#PHP" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rest/RequestProcessor.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="795">
+          <caret line="95" column="78" selection-start-line="95" selection-start-column="78" selection-end-line="95" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/access/AddressDao.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="71" lean-forward="true" selection-start-line="71" selection-end-line="71" />
+          <folding>
+            <element signature="e#224#903#0#PHP" />
+            <element signature="e#909#1650#0#PHP" />
+            <element signature="e#1656#2173#0#PHP" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/data/access/AssessmentDao.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
+        <state relative-caret-position="279">
+          <caret line="126" column="22" lean-forward="true" selection-start-line="126" selection-start-column="22" selection-end-line="126" selection-end-column="22" />
           <folding>
-            <element signature="e#28#36#0#PHP" expanded="true" />
+            <element signature="e#222#886#0#PHP" />
+            <element signature="e#348#825#0#PHP" />
+            <element signature="e#711#825#0#PHP" />
+            <element signature="e#892#1593#0#PHP" />
+            <element signature="e#1002#1565#0#PHP" />
+            <element signature="e#1165#1292#0#PHP" />
+            <element signature="e#1393#1565#0#PHP" />
+            <element signature="e#1431#1554#0#PHP" />
+            <element signature="e#2165#2365#0#PHP" />
+            <element signature="e#2203#2354#0#PHP" />
+            <element signature="e#2399#2985#0#PHP" />
+            <element signature="e#2541#2956#0#PHP" />
+            <element signature="e#2758#2956#0#PHP" />
+            <element signature="e#2796#2945#0#PHP" />
+            <element signature="e#3387#3512#0#PHP" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/model/Course.php">
+    <entry file="file://$PROJECT_DIR$/sql/read_operations.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2465">
-          <caret line="194" column="44" selection-start-line="194" selection-start-column="44" selection-end-line="194" selection-end-column="44" />
-          <folding>
-            <element signature="e#313#345#0#PHP" />
-            <element signature="e#350#424#0#PHP" />
-            <element signature="e#430#494#0#PHP" />
-            <element signature="e#499#611#0#PHP" />
-            <element signature="e#617#649#0#PHP" />
-            <element signature="e#654#721#0#PHP" />
-            <element signature="e#727#787#0#PHP" />
-            <element signature="e#792#889#0#PHP" />
-            <element signature="e#895#927#0#PHP" />
-            <element signature="e#932#1014#0#PHP" />
-            <element signature="e#1020#1088#0#PHP" />
-            <element signature="e#1227#1259#0#PHP" />
-            <element signature="e#1264#1335#0#PHP" />
-            <element signature="e#1341#1403#0#PHP" />
-            <element signature="e#1408#1513#0#PHP" />
-            <element signature="e#1519#1551#0#PHP" />
-            <element signature="e#1556#1632#0#PHP" />
-          </folding>
+        <state relative-caret-position="308">
+          <caret line="25" column="25" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/model/Student.php">
+    <entry file="file://$PROJECT_DIR$/data/access/FacultyDao.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="54" selection-start-line="17" selection-start-column="54" selection-end-line="17" selection-end-column="54" />
+        <state relative-caret-position="340">
+          <caret line="20" column="44" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="44" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/model/Person.php">
+    <entry file="file://$PROJECT_DIR$/rest/NoteRequestProcessor.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        <state relative-caret-position="2193">
+          <caret line="129" column="11" selection-start-line="129" selection-start-column="11" selection-end-line="129" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
+    <entry file="file://$PROJECT_DIR$/rest/RouteProcessor.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="30" selection-start-line="4" selection-start-column="30" selection-end-line="5" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/access/StudentDao.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="36" column="22" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="22" />
-          <folding>
-            <element signature="e#28#36#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rest/StudentRequestProcessor.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="36" column="36" selection-start-line="36" selection-start-column="36" selection-end-line="36" selection-end-column="36" />
+        <state relative-caret-position="799">
+          <caret line="47" column="11" selection-start-line="47" selection-start-column="11" selection-end-line="47" selection-end-column="11" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/rest/AssessmentRequestProcessor.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" column="49" selection-start-line="32" selection-start-column="49" selection-end-line="32" selection-end-column="49" />
+        <state relative-caret-position="119">
+          <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/model/Term.php">
+    <entry file="file://$PROJECT_DIR$/rest/AddressRequestProcessor.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1258">
-          <caret line="122" column="10" selection-start-line="122" selection-start-column="10" selection-end-line="122" selection-end-column="10" />
+        <state relative-caret-position="136">
+          <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/access/ImageDao.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rest/CourseRequestProcessor.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="264" column="51" lean-forward="true" selection-start-line="264" selection-start-column="51" selection-end-line="264" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rest/UniversityRequestProcessor.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="124" column="19" selection-start-line="124" selection-start-column="19" selection-end-line="124" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/access/StudentDao.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2533">
+          <caret line="149" column="5" lean-forward="true" selection-start-line="17" selection-end-line="149" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rest/TermRequestProcessor.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="901">
+          <caret line="53" column="33" selection-start-line="53" selection-start-column="33" selection-end-line="53" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/access/TermDao.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2312">
+          <caret line="137" column="40" selection-start-line="137" selection-start-column="40" selection-end-line="137" selection-end-column="40" />
           <folding>
-            <element signature="e#195#227#0#PHP" />
-            <element signature="e#232#302#0#PHP" />
-            <element signature="e#308#368#0#PHP" />
-            <element signature="e#373#477#0#PHP" />
-            <element signature="e#483#515#0#PHP" />
-            <element signature="e#520#587#0#PHP" />
-            <element signature="e#593#651#0#PHP" />
-            <element signature="e#656#753#0#PHP" />
-            <element signature="e#759#791#0#PHP" />
-            <element signature="e#796#872#0#PHP" />
-            <element signature="e#878#941#0#PHP" />
-            <element signature="e#946#1062#0#PHP" />
-            <element signature="e#1068#1100#0#PHP" />
-            <element signature="e#1105#1177#0#PHP" />
-            <element signature="e#1183#1244#0#PHP" />
-            <element signature="e#1249#1357#0#PHP" />
+            <element signature="e#27#41#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/model/Assessment.php">
+    <entry file="file://$PROJECT_DIR$/sql/create_views.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" selection-start-line="17" selection-end-line="36" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rest/LoginRequestProcessor.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="918">
+          <caret line="54" column="58" selection-start-line="54" selection-start-column="58" selection-end-line="54" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/access/UserDao.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2448">
+          <caret line="144" column="38" selection-start-line="144" selection-start-column="38" selection-end-line="144" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/log/Log.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="38" column="5" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sql/write_operations.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1224">
+          <caret line="72" column="53" selection-start-line="72" selection-start-column="53" selection-end-line="72" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/model/Student.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/model/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="447">
+          <caret line="168" column="1" selection-start-line="168" selection-start-column="1" selection-end-line="168" selection-end-column="1" />
+          <folding>
+            <element signature="e#402#502#0#PHP" />
+            <element signature="e#507#615#0#PHP" />
+            <element signature="e#620#720#0#PHP" />
+            <element signature="e#725#823#0#PHP" />
+            <element signature="e#828#921#0#PHP" />
+            <element signature="e#926#1019#0#PHP" />
+            <element signature="e#1024#1121#0#PHP" />
+            <element signature="e#1126#1213#0#PHP" />
+            <element signature="e#1219#1251#0#PHP" />
+            <element signature="e#1256#1326#0#PHP" />
+            <element signature="e#1331#1363#0#PHP" />
+            <element signature="e#1368#1437#0#PHP" />
+            <element signature="e#1442#1474#0#PHP" />
+            <element signature="e#1479#1555#0#PHP" />
+            <element signature="e#1560#1592#0#PHP" />
+            <element signature="e#1597#1671#0#PHP" />
+            <element signature="e#1676#1792#0#PHP" />
+            <element signature="e#1797#1829#0#PHP" />
+            <element signature="e#1834#1901#0#PHP" />
+            <element signature="e#1906#1938#0#PHP" />
+            <element signature="e#1943#2010#0#PHP" />
+            <element signature="e#2015#2084#0#PHP" />
+            <element signature="e#2089#2166#0#PHP" />
+            <element signature="e#2172#2264#0#PHP" />
+            <element signature="e#2270#2725#0#PHP" />
+            <element signature="e#2607#2697#0#PHP" />
+            <element signature="e#2731#3134#0#PHP" />
+            <element signature="e#2783#3127#0#PHP" />
+            <element signature="e#3140#3432#0#PHP" />
+            <element signature="e#3537#4137#0#PHP" />
+            <element signature="e#3719#4108#0#PHP" />
+            <element signature="e#3767#4062#0#PHP" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/access/PDOable.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="36" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/model/Course.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+          <folding>
+            <element signature="e#290#322#0#PHP" />
+            <element signature="e#327#396#0#PHP" />
+            <element signature="e#402#463#0#PHP" />
+            <element signature="e#468#569#0#PHP" />
+            <element signature="e#575#607#0#PHP" />
+            <element signature="e#612#691#0#PHP" />
+            <element signature="e#697#763#0#PHP" />
+            <element signature="e#768#889#0#PHP" />
+            <element signature="e#896#928#0#PHP" />
+            <element signature="e#933#1007#0#PHP" />
+            <element signature="e#1013#1077#0#PHP" />
+            <element signature="e#1082#1194#0#PHP" />
+            <element signature="e#1200#1232#0#PHP" />
+            <element signature="e#1237#1304#0#PHP" />
+            <element signature="e#1310#1370#0#PHP" />
+            <element signature="e#1375#1472#0#PHP" />
+            <element signature="e#1478#1510#0#PHP" />
+            <element signature="e#1515#1597#0#PHP" />
+            <element signature="e#1603#1671#0#PHP" />
+            <element signature="e#1676#1804#0#PHP" />
+            <element signature="e#1810#1842#0#PHP" />
+            <element signature="e#1847#1918#0#PHP" />
+            <element signature="e#1924#1986#0#PHP" />
+            <element signature="e#1991#2096#0#PHP" />
+            <element signature="e#2184#2449#0#PHP" />
+            <element signature="e#2455#2747#0#PHP" />
+            <element signature="e#2752#3096#0#PHP" />
+            <element signature="e#2805#3089#0#PHP" />
+            <element signature="e#3101#3735#0#PHP" />
+            <element signature="e#3289#3704#0#PHP" />
+            <element signature="e#3337#3656#0#PHP" />
+            <element signature="e#3741#3990#0#PHP" />
+            <element signature="e#3793#3983#0#PHP" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/model/Faculty.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="44" selection-start-line="24" selection-start-column="44" selection-end-line="24" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/model/Address.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="16" column="3" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
+          <folding>
+            <element signature="e#322#693#0#PHP" />
+            <element signature="e#699#778#0#PHP" />
+            <element signature="e#784#959#0#PHP" />
+            <element signature="e#966#998#0#PHP" />
+            <element signature="e#1003#1079#0#PHP" />
+            <element signature="e#1084#1150#0#PHP" />
+            <element signature="e#1155#1187#0#PHP" />
+            <element signature="e#1192#1278#0#PHP" />
+            <element signature="e#1283#1315#0#PHP" />
+            <element signature="e#1320#1398#0#PHP" />
+            <element signature="e#1403#1435#0#PHP" />
+            <element signature="e#1440#1509#0#PHP" />
+            <element signature="e#1514#1546#0#PHP" />
+            <element signature="e#1551#1628#0#PHP" />
+            <element signature="e#1633#1665#0#PHP" />
+            <element signature="e#1670#1735#0#PHP" />
+            <element signature="e#1740#1772#0#PHP" />
+            <element signature="e#1777#1844#0#PHP" />
+            <element signature="e#1849#1881#0#PHP" />
+            <element signature="e#1886#1960#0#PHP" />
+            <element signature="e#1966#2044#0#PHP" />
+            <element signature="e#2051#2495#0#PHP" />
+            <element signature="e#2113#2488#0#PHP" />
+            <element signature="e#2142#2487#0#PHP" />
+            <element signature="e#2500#2970#0#PHP" />
+            <element signature="e#2560#2963#0#PHP" />
+            <element signature="e#2976#3070#0#PHP" />
+            <element signature="e#3076#3425#0#PHP" />
+            <element signature="e#3309#3393#0#PHP" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/model/TermCourse.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="66" column="39" selection-start-line="66" selection-start-column="39" selection-end-line="66" selection-end-column="39" />
+          <folding>
+            <element signature="e#136#168#0#PHP" />
+            <element signature="e#173#249#0#PHP" />
+            <element signature="e#255#324#0#PHP" />
+            <element signature="e#329#445#0#PHP" />
+            <element signature="e#451#483#0#PHP" />
+            <element signature="e#488#560#0#PHP" />
+            <element signature="e#566#633#0#PHP" />
+            <element signature="e#638#746#0#PHP" />
+            <element signature="e#752#784#0#PHP" />
+            <element signature="e#789#858#0#PHP" />
+            <element signature="e#864#929#0#PHP" />
+            <element signature="e#934#1035#0#PHP" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/7a3d04a1-7f5d-40de-b00d-0716391261de/console.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="20" lean-forward="true" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+        <state relative-caret-position="357">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sql/create_tables.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="748">
+          <caret line="61" selection-start-line="61" selection-end-line="61" />
+          <folding>
+            <element signature="e#116#221#0" />
+            <element signature="e#140#221#0" />
+            <element signature="e#235#311#0" />
+            <element signature="e#314#689#0" />
+            <element signature="e#333#689#0" />
+            <element signature="e#707#888#0" />
+            <element signature="e#805#888#0" />
+            <element signature="n#notes#0" />
+            <element signature="n#addresses#0" />
+            <element signature="n#user_images#0" />
+            <element signature="n#terms#0" />
+            <element signature="n#term_courses#0" />
+            <element signature="n#course_mentors#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sql/drop_tables.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/util/dash_stubs.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="1" selection-start-column="1" selection-end-column="1" />
+          <folding>
+            <element signature="n#head#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#form#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#form#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#4;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/access/CourseDaoTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="359">
+          <caret line="30" column="16" lean-forward="true" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/model/Assessment.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="111" column="33" selection-start-line="111" selection-start-column="33" selection-end-line="111" selection-end-column="33" />
+          <folding>
+            <element signature="e#372#450#0#PHP" />
+            <element signature="e#455#557#0#PHP" />
+            <element signature="e#562#632#0#PHP" />
+            <element signature="e#637#723#0#PHP" />
+            <element signature="e#728#791#0#PHP" />
+            <element signature="e#796#867#0#PHP" />
+            <element signature="e#872#933#0#PHP" />
+            <element signature="e#938#1020#0#PHP" />
+            <element signature="e#1095#1329#0#PHP" />
+            <element signature="e#1185#1323#0#PHP" />
+            <element signature="e#1253#1323#0#PHP" />
+            <element signature="e#1334#1397#0#PHP" />
+            <element signature="e#1402#1496#0#PHP" />
+            <element signature="e#1501#1683#0#PHP" />
+            <element signature="e#1780#2088#0#PHP" />
+            <element signature="e#2094#2485#0#PHP" />
+            <element signature="e#2228#2478#0#PHP" />
+            <element signature="e#2491#2783#0#PHP" />
+            <element signature="e#3067#3326#0#PHP" />
+            <element signature="e#3339#3661#0#PHP" />
+            <element signature="e#3539#3626#0#PHP" />
+            <element signature="e#3786#3904#0#PHP" />
+            <element signature="e#3839#3897#0#PHP" />
+            <element signature="e#3910#4097#0#PHP" />
+            <element signature="e#4103#4167#0#PHP" />
+            <element signature="e#4318#4388#0#PHP" />
+            <element signature="e#4394#4426#0#PHP" />
+            <element signature="e#4431#4498#0#PHP" />
+            <element signature="e#4504#4572#0#PHP" />
+            <element signature="e#4577#4674#0#PHP" />
+            <element signature="e#4680#4712#0#PHP" />
+            <element signature="e#4717#4796#0#PHP" />
+            <element signature="e#4802#4876#0#PHP" />
+            <element signature="e#4881#5002#0#PHP" />
+            <element signature="e#5008#5040#0#PHP" />
+            <element signature="e#5045#5122#0#PHP" />
+            <element signature="e#5128#5201#0#PHP" />
+            <element signature="e#5206#5323#0#PHP" />
+            <element signature="e#5329#5361#0#PHP" />
+            <element signature="e#5366#5445#0#PHP" />
+            <element signature="e#5451#5525#0#PHP" />
+            <element signature="e#5530#5651#0#PHP" />
+            <element signature="e#5657#5689#0#PHP" />
+            <element signature="e#5694#5775#0#PHP" />
+            <element signature="e#5781#5856#0#PHP" />
+            <element signature="e#5861#5986#0#PHP" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/model/Term.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="13" column="22" lean-forward="true" selection-start-line="13" selection-start-column="22" selection-end-line="14" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rest/StudentRequestProcessor.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="30" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
+          <folding>
+            <element signature="e#1729#5102#0#PHP" />
+            <element signature="e#5647#6204#0#PHP" />
+            <element signature="e#6271#9278#0#PHP" />
+            <element signature="e#9347#11361#0#PHP" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -2,7 +2,6 @@
 namespace Capstone;
 
 
-use PDO;
 use PDOException;
 
 require_once "data/model/Assessment.php";
@@ -11,8 +10,8 @@ class AssessmentDao
 {
     private $db;
 
-    public function __construct(PDO $db) {
-        $this->db = $db;
+    public function __construct() {
+        $this->db = Database::getInstance();
     }
 
     function load($assessment_id)
@@ -68,16 +67,43 @@ class AssessmentDao
         return null;
     }
 
-    function save($assessment)
+    function loadAssessmentsForCourse($course_id)
     {
-        // TODO: Implement save() method.
-        $sql = "INSERT INTO "
-                ."assessments(assessment_id, title, type, start_date, end_date)"
-                ." VALUES (:assessment_id, :title, :type, :start_date, :end_date)";
+        global $_SQL_R;
+        $assessments = array();
 
         try {
             // Prepare
-            $query = $this->db->prepare($sql);
+            $query = $this->db->prepare($_SQL_R['get_course_assessments']);
+            // Execute
+            $query->execute([ ':course_id' => $course_id ]);
+            // Fetch
+            while($result = $query->fetchObject('Capstone\Assessment')) {
+                array_push($assessments, $result);
+            }
+            // Clear
+            $query->nextRowset();
+
+            return $assessments;
+
+        } catch (PDOException $e) {
+            Log::e(
+                "Could not retrieve assessments for course: " . $course_id
+                    ."\n\tMessage: " .$e->getMessage()
+            );
+        }
+
+        return null;
+    }
+
+    function save(Assessment $assessment)
+    {
+        Log::i("Attempting to save assessment: " . $assessment);
+        global $_SQL_W;
+
+        try {
+            // Prepare
+            $query = $this->db->prepare($_SQL_W['add_assessment']);
             // Execute
             $query->execute( $assessment->as_pdo_array() );
 
@@ -87,6 +113,51 @@ class AssessmentDao
             Log::e(
                 "Error saving assessment data for assessment: " . $assessment
                 ."\nMessage: " . $e->getMessage()
+            );
+        }
+
+        return false;
+    }
+
+    function update(Assessment $assessment)
+    {
+        global $_SQL_W;
+
+        try {
+            // Prepare
+            $query = $this->db->prepare($_SQL_W['update_assessment']);
+            // Execute
+            $query->execute( $assessment->as_pdo_array() );
+
+            return true;
+
+        } catch (PDOException $e) {
+            Log::e(
+                "Error updating assessment!"
+                        ."\n\tMessage: ". $e->getMessage()
+            );
+        }
+
+        return false;
+    }
+
+    function delete($assessment_id)
+    {
+        global $_SQL_W;
+
+        try {
+            // Prepare
+            $query = $this->db->prepare($_SQL_W['remove_assessment']);
+            // Execute
+            $query->execute( [':assessment_id' => $assessment_id] );
+
+            if( $query->rowCount() == 1 ) {
+                return true;
+            }
+        } catch (PDOException $e) {
+            Log::e(
+                "Could not delete assessment: {$assessment_id}"
+                        ."\n\tMessage: " . $e->getMessage()
             );
         }
 

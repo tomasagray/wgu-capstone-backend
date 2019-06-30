@@ -1,14 +1,18 @@
 <?php
 namespace Capstone;
 
+use DateTime;
+use Exception;
 use JsonSerializable;
 
 class Term implements JsonSerializable, PDOable
 {
     private $term_id;
+    private $student_id;
     private $title;
     private $start_date;
     private $end_date;
+    private $courses;
 
     /**
      * @return mixed
@@ -25,6 +29,15 @@ class Term implements JsonSerializable, PDOable
     public function setTermId($term_id)
     {
         $this->term_id = $term_id;
+        return $this;
+    }
+
+    public function getStudentId() {
+        return $this->student_id;
+    }
+
+    public function setStudentId($id) {
+        $this->student_id = $id;
         return $this;
     }
 
@@ -60,7 +73,12 @@ class Term implements JsonSerializable, PDOable
      */
     public function setStartDate($start_date)
     {
-        $this->start_date = $start_date;
+        try {
+            $this->start_date = new DateTime($start_date);
+        } catch (Exception $e) {
+            $this->start_date = null;
+        }
+
         return $this;
     }
 
@@ -88,17 +106,18 @@ class Term implements JsonSerializable, PDOable
         return
             "ID: " . $this->term_id ."\n"
             ."Title: " . $this->title . "\n"
-            ."Start: " . $this->start_date . "\n"
-            ."End: ". $this->end_date;
+            ."Start: " . $this->getStartDate()->format(DATE_FORMAT) . "\n"
+            ."End: ". $this->getEndDate()->format(DATE_FORMAT);
     }
 
     public function as_pdo_array()
     {
         return [
-            ':term_id' => $this->term_id,
-            ':title' => $this->title,
-            ':start_date' => $this->start_date->format('Y-m-d'),
-            ':end_date' => $this->end_date->format('Y-m-d')
+            ':term_id' => $this->getTermId(),
+            ':student_id' => $this->getStudentId(),
+            ':title' => $this->getTitle(),
+            ':start_date' => date('Y-m-d', strtotime($this->getStartDate())),
+            ':end_date' => date('Y-m-d', strtotime($this->getEndDate()))
         ];
     }
 
@@ -112,25 +131,36 @@ class Term implements JsonSerializable, PDOable
     public function jsonSerialize()
     {
         return [
-            'termId' => $this->term_id,
-            'title' => $this->title,
-//            'startDate' => $this->start_date->format(DATE_FORMAT),
-            'startDate' => $this->start_date,
-//            'startDate' => $this->getDateArray($this->start_date),
-//            'endDate' => $this->getDateArray($this->end_date)
-//            'endDate' => $this->end_date->format(DATE_FORMAT)
-            'endDate' => $this->end_date
+            'term_id' => $this->getTermId(),
+            'student_id' => $this->getStudentId(),
+            'title' => $this->getTitle(),
+            'start_date' => $this->getStartDate(),
+            'end_date' => $this->getEndDate()
         ];
     }
 
+    public static function fromJSON($data) : Term {
+        // Term container
+        $term = new Term();
+        $data = json_decode($data);
+        foreach ($data AS $key => $value) {
+            try {
+                if($key == "start_date") {
+                    $term->start_date = date('Y-m-d', strtotime($value));
+                } else if( $key == "end_date"){
+                    $term->end_date = date('Y-m-d', strtotime($value));
+                } else {
+                    $term->{$key} = $value;
+                }
 
-    private function getDateArray($date)
-    {
-        $time_str = strtotime($date);
-        return [
-            'year' => intval(date('Y', $time_str)),
-            'month' => intval(date('m', $time_str)),
-            'day'   => intval(date('d', $time_str))
-        ];
+            } catch (Exception $e) {
+                Log::e(
+                    "Caught exception parsing date"
+                            ."\n\tMessage: " . $e->getMessage()
+                );
+            }
+        }
+
+        return $term;
     }
 }

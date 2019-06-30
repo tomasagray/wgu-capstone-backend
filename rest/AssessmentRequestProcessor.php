@@ -5,6 +5,7 @@ require_once "data/access/AssessmentDao.php";
 require_once "rest/Response.php";
 require_once "rest/RouteProcessor.php";
 
+// TODO: Delete this class?
 class AssessmentRequestProcessor
 {
     private $method;
@@ -16,7 +17,7 @@ class AssessmentRequestProcessor
     {
         $this->method = $request_method;
         $this->routes = $routes;
-        $this->assessment_dao = new AssessmentDao(Database::getInstance());
+        $this->assessment_dao = new AssessmentDao();
         $this->response = new Response();
     }
 
@@ -42,11 +43,11 @@ class AssessmentRequestProcessor
         $assessment = $this->assessment_dao->load($assessment_id);
 
         if($assessment != null) {
-            Log::i("Successfully retrieved data for assessment: " . $assessment_id);
+            Log::i("Successfully retrieved data for assessment: " . $assessment);
             $this->response->setStatusCode(Response::HTTP_200);
-            $this->response->setBody( json_encode($assessment) );
+            $this->response->setBody( $assessment );
         } else {
-            Log::e("Error loading data for assesment: " . $assessment_id);
+            Log::e("Error loading data for assessment: " . $assessment_id);
             $this->response->setStatusCode(Response::HTTP_404);
         }
     }
@@ -57,7 +58,7 @@ class AssessmentRequestProcessor
         if($assessments != null) {
             Log::i("Successfully retrieved all assessment data");
             $this->response->setStatusCode(Response::HTTP_200);
-            $this->response->setBody( json_encode($assessments) );
+            $this->response->setBody( $assessments );
         } else {
             Log::e("Error getting all assessment data from DB");
             $this->response->setStatusCode(Response::HTTP_404);

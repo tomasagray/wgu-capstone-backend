@@ -15,16 +15,25 @@ class RouteProcessor
         Log::i("Routes: " . implode(' => ', $this->routes));
     }
 
-    public function getRoute($i) {
-        return $this->routes[$i];
-    }
 
+    public function getRequestType() {
+        return $this->getRoute(0);
+    }
+    public function getEndPoint() {
+        $index = count($this->routes) -1;
+        return $this->routes[$index];
+    }
+    public function getRoute($i) {
+        return (isset($this->routes[$i])) ? $this->routes[$i] : null;
+    }
     public function hasSubRoute() {
         return isset($this->routes[1]);
     }
 
-    public function getBaseRoute() {
-        return $this->routes[0];
+    public function getSubRouteCount() {
+        // Get the number of routes, minus
+        // the base route
+        return count($this->routes) -1;
     }
 
     private static function parseRoutes()
@@ -37,9 +46,7 @@ class RouteProcessor
         $routes = explode('/', $url);
 
         // TODO: Fix this!!!!
-       $routes = self::subDirify($routes);
-
-        return self::clean_routes($routes);
+       return self::subDirify($routes);
     }
 
     private static function clean_routes($routes)

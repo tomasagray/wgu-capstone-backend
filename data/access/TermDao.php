@@ -1,6 +1,7 @@
 <?php
 namespace Capstone;
 
+use Exception;
 use PDOException;
 
 require_once "data/model/Term.php";
@@ -12,45 +13,18 @@ class TermDao
         $this->db = Database::getInstance();
     }
 
-    function load($term_id)
+    function loadStudentTerms($student_id)
     {
-        $sql = "SELECT * FROM terms WHERE term_id = :term_id";
-
-        try {
-            // Prepare
-            $query = $this->db->prepare($sql);
-            // Execute
-            $query->execute( [':term_id' => $term_id] );
-            // Fetch
-            $result = $query->fetchObject('Capstone\Term');
-            // Clear buffer
-            $query->nextRowset();
-
-            return $result;
-
-        } catch (PDOException $e) {
-            Log::e(
-                "Error getting data for term ID: " . $term_id
-                ."\n\tMessage: " . $e->getMessage()
-            );
-        }
-
-        return null;
-    }
-
-    function loadAll()
-    {
+        global $_SQL_R;
         $terms = array();
-        $sql = "SELECT * FROM terms";
 
         try {
             // Prepare
-            $query = $this->db->prepare($sql);
+            $query = $this->db->prepare($_SQL_R['get_student_terms']);
             // Execute
-            $query->execute();
+            $query->execute( [':student_id' => $student_id] );
             // Fetch results
             while($result = $query->fetchObject('Capstone\Term')) {
-                Log::i("Retrieved term: " . $result);
                 array_push($terms, $result);
             }
 
@@ -62,7 +36,7 @@ class TermDao
         } catch (PDOException $e) {
             Log::e(
                 "Could not load all term data"
-                     ."\n\tMessage: " . $e->getMessage()
+                ."\n\tMessage: " . $e->getMessage()
             );
         }
 
@@ -71,24 +45,157 @@ class TermDao
 
     function save(Term $term)
     {
-        $sql = "INSERT INTO terms(term_id, title, start_date, end_date) "
-                ."VALUES (:term_id, :title, :start_date, :end_date)";
-
+        global $_SQL_W;
+        Log::i("Saving: " . json_encode($term));
         try {
             // Prepare
-            $query = $this->db->prepare($sql);
+            $query = $this->db->prepare($_SQL_W['enroll_student_in_term']);
             // Execute
             $query->execute( $term->as_pdo_array() );
 
             return true;
 
-        } catch (PDOException $e) {
+        } catch (Exception $e) {
             Log::e(
-                "Error saving term data: " . $term
+                "Error saving term data: " . json_encode($term)
                     ."\n\tMessage: " . $e->getMessage()
             );
         }
 
         return false;
+    }
+
+    function update(Term $term)
+    {
+        global $_SQL_W;
+
+        try {
+            Log::i("Attempting to update term: {$term->getTermId()}");
+            // Prepare
+            $query = $this->db->prepare($_SQL_W['update_term']);
+            // Execute
+            $query->execute([
+                ':term_id' => $term->getTermId(),
+                ':start_date' => $term->getStartDate(),
+                ':end_date' => $term->getEndDate()
+            ]);
+
+            return true;
+
+        } catch (PDOException $e) {
+            Log::e(
+                "Could not update term!"
+                        ."\n\tMessage: " . $e->getMessage()
+            );
+        }
+
+        return false;
+    }
+
+    function delete($term_id) {
+        Log::i("Deleting term: {$term_id}");
+        global $_SQL_W;
+        try {
+            // Prepare
+            $query = $this->db->prepare($_SQL_W['unenroll_student_from_term']);
+            // Execute
+            $query->execute( [':term_id' => $term_id] );
+            $rows = $query->rowCount();
+                Log::i("Rows: {$rows}");
+            if($rows == 1)
+                return true;
+            else
+                return false;
+
+        } catch (PDOException $e) {
+            Log::e(
+                "Could not delete term!"
+                    ."\n\tMessage: " . $e->getMessage()
+            );
+
+            return false;
+        }
+    }
+
+    function assignCourse($term_id, $course_data)
+    {
+        global $_SQL_W;
+        try {
+            $start = date('Y-m-d', strtotime($course_data->start_date));
+            $end = date('Y-m-d', strtotime($course_data->end_date));
+            // Prepare
+            $query = $this->db->prepare($_SQL_W['assoc_class_with_term']);
+            //Execute
+            $data = [
+                ':term_id'  => $term_id,
+                ':course_id' => $course_data->course_id,
+                ':start_date' => $start,
+                ':end_date' => $end,
+                ':status' => $course_data->course_status
+            ];
+            Log::i("Associating course data: " . json_encode($data));
+            $result = $query->execute($data);
+            Log::i("Result: {$result}");
+            return true;
+
+        } catch (PDOException $e) {
+            Log::e(
+                "Error associating term: ". $term_id
+                ." with course: " . $course_data->course_id
+                ."\n\tMessage: " . $e->getMessage()
+            );
+        }
+
+        return false;
+    }
+
+    function clearTermCourses($term_id)
+    {
+        global $_SQL_W;
+
+        try {
+            // Prepare
+            $query = $this->db->prepare($_SQL_W['clear_term_courses']);
+            // Execute
+            $query->execute([':term_id' => $term_id]);
+
+            if($query->rowCount() > 0 )
+                return true;
+        } catch (PDOException $e) {
+            Log::e(
+                "Could not clear term courses for term: {$term_id}"
+                    ."\n\tMessage: " . $e->getMessage()
+            );
+        }
+
+        return false;
+    }
+
+    function getCoursesForTerm($term_id)
+    {
+        global $_SQL_R;
+        $courses = array();
+
+        try {
+            // Prepare
+            $query = $this->db->prepare($_SQL_R['get_term_courses']);
+            // Execute
+            $query->execute([':term_id' => $term_id]);
+            // Fetch
+            while($result = $query->fetch()) {
+                Log::i("GOT: " . json_encode($result));
+                array_push($courses, $result);
+            }
+
+            return $courses;
+
+        } catch (PDOException $e) {
+            Log::e(
+                "Could not load courses for term: {$term_id}"
+                    ."\n\tMessage: " . $e->getMessage()
+            );
+
+            return null;
+        }
     }
 }

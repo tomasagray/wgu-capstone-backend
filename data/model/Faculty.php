@@ -1,22 +1,27 @@
 <?php
 namespace Capstone;
 
-require_once "data/model/Person.php";
+require_once "data/model/User.php";
 
-class Faculty extends Person implements PDOable
+class Faculty extends User implements PDOable
 {
-
     public function as_pdo_array()
     {
-        // TODO: Implement as_pdo_array() method.
         return [
-            ':faculty_id' => $this->getId(),
+            ':faculty_id' => $this->getUserId(),
             ':first_name' => $this->getFirstName(),
             ':last_name' => $this->getLastName(),
             ':email' => $this->getEmail(),
-            ':phone' => $this->getPhone(),
-            ':address_id' => $this->getAddress()->getAddressId(),
-            ':image_id' => $this->getImage()->getImageId()
+            ':phone' => $this->getPhone()
         ];
+    }
+
+    public function __toString()
+    {
+        return
+            "Faculty ID: " . $this->getUserId() .
+            ", Name: " . $this->getFullName() .
+            ", Email: " . $this->getEmail() .
+            ", Phone: " . $this->getPhone();
     }
 }

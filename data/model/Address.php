@@ -2,19 +2,22 @@
 namespace Capstone;
 
 
+require_once "data/access/PDOable.php";
+
+
 class Address implements PDOable
 {
     private $address_id;
+    private $user_id;
     private $building_number;
     private $unit_number;
     private $street;
     private $additional;
     private $city;
     private $state;
-    private $country;
     private $post_code;
 
-    public function __construct($id, $building_number, $unit_number, $street, $city, $state, $country, $post_code)
+    public function __construct($id, $building_number, $unit_number, $street, $city, $state, $post_code)
     {
         $this->address_id = $id;
         $this->building_number = $building_number;
@@ -22,7 +25,6 @@ class Address implements PDOable
         $this->street = $street;
         $this->city = $city;
         $this->state = $state;
-        $this->country = $country;
         $this->post_code = $post_code;
     }
 
@@ -35,26 +37,10 @@ class Address implements PDOable
         return
             new Address(
                 null, null, null,
-                null, null, null, null,
-                null
+                null, null, null, null
             );
     }
 
-    public function __toString()
-    {
-        // TODO: Implement __toString() method.
-        return
-            implode(' ',
-                [
-                    $this->building_number,
-                    $this->street,
-                    $this->unit_number,
-                    $this->city,
-                    $this->state,
-                    $this->post_code,
-                    $this->country
-            ]);
-    }
 
     /**
      * @return mixed
@@ -63,7 +49,9 @@ class Address implements PDOable
     {
         return $this->address_id;
     }
-
+    public function getUserId() {
+        return $this->user_id;
+    }
     /**
      * @return mixed
      */
@@ -71,7 +59,6 @@ class Address implements PDOable
     {
         return $this->building_number;
     }
-
     /**
      * @return mixed
      */
@@ -79,7 +66,6 @@ class Address implements PDOable
     {
         return $this->unit_number;
     }
-
     /**
      * @return mixed
      */
@@ -87,7 +73,6 @@ class Address implements PDOable
     {
         return $this->street;
     }
-
     /**
      * @return mixed
      */
@@ -95,7 +80,6 @@ class Address implements PDOable
     {
         return $this->additional;
     }
-
     /**
      * @return mixed
      */
@@ -103,7 +87,6 @@ class Address implements PDOable
     {
         return $this->city;
     }
-
     /**
      * @return mixed
      */
@@ -111,15 +94,6 @@ class Address implements PDOable
     {
         return $this->state;
     }
-
-    /**
-     * @return mixed
-     */
-    public function getCountry()
-    {
-        return $this->country;
-    }
-
     /**
      * @return mixed
      */
@@ -128,18 +102,58 @@ class Address implements PDOable
         return $this->post_code;
     }
 
+    public function setUserId($user_id) {
+        $this->user_id = $user_id;
+    }
+
+
+    public function __toString()
+    {
+        return
+            implode(' ',
+                [
+                    'id: ', $this->getAddressId(),
+                    'userID: ', $this->getUserId(),
+                    $this->building_number,
+                    $this->street,
+                    $this->unit_number,
+                    $this->city,
+                    $this->state,
+                    $this->post_code
+                ]);
+    }
     public function as_pdo_array()
     {
         return
         [
-            ':address_id' => $this->address_id,
-            ':building_number' => $this->building_number,
-            ':street' => $this->street,
-            ':unit_number' => $this->unit_number,
-            ':city' => $this->city,
-            ':state' => $this->state,
-            ':country' => $this->country,
-            ':post_code' => $this->post_code
+            ':address_id' => $this->getAddressId(),
+            ':user_id' => $this->getUserId(),
+            ':building_number' => $this->getBuildingNumber(),
+            ':street' => $this->getStreet(),
+            ':unit_number' => $this->getUnitNumber(),
+            ':city' => $this->getCity(),
+            ':state' => $this->getState(),
+            ':post_code' => $this->getPostCode()
         ];
+    }
+
+    public function jsonSerialize()
+    {
+        // TODO: Implement jsonSerialize() method.
+    }
+
+    public static function fromJSON($data) : Address
+    {
+        // Address container
+        $address = Address::buildEmpty();
+        // Deserialize JSON
+        if(!is_object($data))
+            $data = json_decode($data);
+
+        foreach ($data AS $key => $value) {
+            $address->{$key} = $value;
+        }
+
+        return $address;
     }
 }

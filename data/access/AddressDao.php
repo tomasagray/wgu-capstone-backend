@@ -1,7 +1,6 @@
 <?php
 namespace Capstone;
 
-use PDO;
 use PDOException;
 
 require_once 'data/model/Address.php';
@@ -10,8 +9,8 @@ class AddressDao
 {
     private $db;
 
-    public function __construct(PDO $db) {
-        $this->db = $db;
+    public function __construct() {
+        $this->db = Database::getInstance();
     }
 
     function load($address_id)
@@ -72,13 +71,11 @@ class AddressDao
 
     function save(Address $address)
     {
-        // TODO: Implement save() method.
-        $sql = "INSERT INTO addresses(address_id, building_number, street, unit_number, city, state, country, post_code) "
-                ."VALUES(:address_id, :building_number, :street, :unit_number, :city, :state, :country, :post_code)";
+        global $_SQL_W;
 
         try {
             // Prepare
-            $query = $this->db->prepare($sql);
+            $query = $this->db->prepare( $_SQL_W['add_user_address'] );
             // Execute
             $query->execute( $address->as_pdo_array() );
 
@@ -87,7 +84,28 @@ class AddressDao
         } catch (PDOException $e) {
             Log::e(
                 "Could not save address data to DB for address: " . $address
-                ."\nMessage: " . $e->getMessage()
+                ."\n\tMessage: " . $e->getMessage()
+            );
+        }
+
+        return false;
+    }
+
+    function update(Address $address)
+    {
+        global $_SQL_W;
+
+        try {
+            // Prepare
+            $query = $this->db->prepare($_SQL_W['update_user_address']);
+            // Execute
+            $query->execute( $address->as_pdo_array() );
+
+            return true;
+        } catch (PDOException $e) {
+            Log::e(
+                "Error updating address!"
+                        ."\nMessage: " . $e->getMessage()
             );
         }
 

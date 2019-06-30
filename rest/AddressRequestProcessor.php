@@ -5,6 +5,8 @@ require_once "data/access/AddressDao.php";
 require_once "rest/Response.php";
 require_once "rest/RouteProcessor.php";
 
+
+// TODO: Delete this class?
 class AddressRequestProcessor
 {
     private $method;
@@ -16,7 +18,7 @@ class AddressRequestProcessor
     {
         $this->method = $request_method;
         $this->routes = $routes;
-        $this->address_dao = new AddressDao(Database::getInstance());
+        $this->address_dao = new AddressDao();
         $this->response = new Response();
     }
 
@@ -45,7 +47,7 @@ class AddressRequestProcessor
         if($address != null) {
             Log::i("Successfully loaded data for address: ". $address_id);
             $this->response->setStatusCode(Response::HTTP_200);
-            $this->response->setBody( json_encode($address) );
+            $this->response->setBody( $address );
         } else {
             Log::e("Error loading data for address: ". $address_id);
             $this->response->setStatusCode(Response::HTTP_404);
@@ -59,7 +61,7 @@ class AddressRequestProcessor
         if($addresses != null) {
             Log::i("Successfully loaded all address data");
             $this->response->setStatusCode(Response::HTTP_200);
-            $this->response->setBody( json_encode($addresses) );
+            $this->response->setBody( $addresses );
         } else {
             Log::e("Error loading all address data from DB");
             $this->response->setStatusCode(Response::HTTP_404);

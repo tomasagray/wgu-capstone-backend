@@ -12,10 +12,44 @@ class Course implements JsonSerializable, PDOable
     private $title;
     private $course_number;
     private $credits;
-    private $start_date;
-    private $end_date;
-    private $status;
+    private $mentor;
+    private $assessments;
 
+    /**
+     * @return mixed
+     */
+    public function getMentor()
+    {
+        return $this->mentor;
+    }
+
+    /**
+     * @param mixed $mentor
+     * @return Course
+     */
+    public function setMentor($mentor)
+    {
+        $this->mentor = $mentor;
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getAssessments()
+    {
+        return $this->assessments;
+    }
+
+    /**
+     * @param mixed $assessments
+     * @return Course
+     */
+    public function setAssessments($assessments)
+    {
+        $this->assessments = $assessments;
+        return $this;
+    }
 
     /**
      * @return mixed
@@ -89,79 +123,6 @@ class Course implements JsonSerializable, PDOable
         return $this;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getStartDate()
-    {
-        return $this->start_date;
-    }
-
-    public function getStartDateArray()
-    {
-        $time_str = strtotime($this->start_date);
-        return [
-            'year' => intval(date('Y', $time_str)),
-            'month' => intval(date('m', $time_str)),
-            'day'   => intval(date('d', $time_str))
-        ];
-    }
-
-    /**
-     * @param mixed $start_date
-     * @return Course
-     */
-    public function setStartDate($start_date)
-    {
-        $this->start_date = $start_date;
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getEndDate()
-    {
-        return $this->end_date;
-    }
-    public function getEndDateArray()
-    {
-        $time_str = strtotime($this->end_date);
-        return [
-            'year' => intval(date('Y', $time_str)),
-            'month' => intval(date('m', $time_str)),
-            'day'   => intval(date('d', $time_str))
-        ];
-    }
-
-    /**
-     * @param mixed $end_date
-     * @return Course
-     */
-    public function setEndDate($end_date)
-    {
-        $this->end_date = $end_date;
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getStatus()
-    {
-        return $this->status;
-    }
-
-    /**
-     * @param mixed $status
-     * @return Course
-     */
-    public function setStatus($status)
-    {
-        $this->status = $status;
-        return $this;
-    }
-
 
     // Helpers
     // ----------------------------------------------------------
@@ -172,9 +133,7 @@ class Course implements JsonSerializable, PDOable
             "ID: " . $this->course_id . "\n"
                 . "Title: " . $this->title . "\n"
                 . "Number: " . $this->course_number . "\n"
-                . "Credtis: " . $this->credits . "\n"
-                . "Start: " . $this->start_date . "\n"
-                . "End: " . $this->end_date;
+                . "Credits: " . $this->credits . "\n";
     }
 
     /**
@@ -189,16 +148,31 @@ class Course implements JsonSerializable, PDOable
         return [
             'course_id' => $this->course_id,
             'title' => $this->title,
-            'courseNumber' => $this->course_number,
+            'course_number' => $this->course_number,
             'credits' => $this->credits,
-//            'startDate' => $this->start_date->format(DATE_FORMAT),
-            'startDate' => $this->start_date,
-//            'startDate' => $this->getStartDateArray(),
-//            'endDate' => $this->end_date->format(DATE_FORMAT),
-            'endDate' => $this->end_date,
-//            'endDate' => $this->getEndDateArray(),
-            'status' => $this->status
+            'mentor' => $this->getMentor(),
+            'assessments' => $this->getAssessments()
         ];
+    }
+    public static function fromJSON($data) : Course
+    {
+        // Student container
+        $course = new Course();
+        // Deserialize JSON
+        $data = json_decode($data);
+
+        foreach ($data AS $key => $value) {
+            if ($key == "assessment") {
+                Log::i("parsing assessment: " . json_encode($value));
+                $assessment = Assessment::fromJSON($value);
+                // Ensure foreign key set
+                $assessment->setCourseId( $course->getCourseId() );
+                $value = $assessment;
+            }
+            $course->{$key} = $value;
+        }
+
+        return $course;
     }
 
     public function as_pdo_array()
@@ -207,10 +181,7 @@ class Course implements JsonSerializable, PDOable
             ':course_id' => $this->course_id,
             ':title' => $this->title,
             ':course_number' => $this->course_number,
-            ':credits' => $this->credits,
-            ':start_date' => $this->start_date->format(DATE_FORMAT),
-            ':end_date' => $this->end_date->format(DATE_FORMAT),
-            ':status' => $this->status
+            ':credits' => $this->credits
         ];
     }
 }

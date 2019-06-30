@@ -2,7 +2,9 @@
 namespace Capstone;
 
 
-class Image
+use JsonSerializable;
+
+class Image implements JsonSerializable, PDOable
 {
     private $image_id;
     private $img_uri;
@@ -14,12 +16,6 @@ class Image
     {
         $this->image_id = $id;
         $this->img_uri = $uri;
-    }
-
-    public static function buildEmpty()
-    {
-        return
-            new Image(null, null);
     }
 
     /**
@@ -60,5 +56,88 @@ class Image
     public function getFormat()
     {
         return $this->format;
+    }
+
+    /**
+     * @param mixed $image_id
+     * @return Image
+     */
+    public function setImageId($image_id)
+    {
+        $this->image_id = $image_id;
+        return $this;
+    }
+
+    /**
+     * @param mixed $img_uri
+     * @return Image
+     */
+    public function setImgUri($img_uri)
+    {
+        $this->img_uri = $img_uri;
+        return $this;
+    }
+
+    /**
+     * @param mixed $height
+     * @return Image
+     */
+    public function setHeight($height)
+    {
+        $this->height = $height;
+        return $this;
+    }
+
+    /**
+     * @param mixed $width
+     * @return Image
+     */
+    public function setWidth($width)
+    {
+        $this->width = $width;
+        return $this;
+    }
+
+    /**
+     * @param mixed $format
+     * @return Image
+     */
+    public function setFormat($format)
+    {
+        $this->format = $format;
+        return $this;
+    }
+
+
+    public function as_pdo_array()
+    {
+        return [
+            ':image_id' => $this->getImageId(),
+            ':image_uri' => $this->getImgUri(),
+            ':height' => $this->getHeight(),
+            ':width' => $this->getWidth(),
+            ':format' => $this->getFormat()
+        ];
+    }
+
+    /**
+     * Specify data which should be serialized to JSON
+     * @link https://php.net/manual/en/jsonserializable.jsonserialize.php
+     * @return mixed data which can be serialized by <b>json_encode</b>,
+     * which is a value of any type other than a resource.
+     * @since 5.4.0
+     */
+    public function jsonSerialize()
+    {
+        return $this;
+    }
+
+    public function __toString()
+    {
+        return
+            "ID: " . $this->getImageId() . "\n"
+            ."URI: " . $this->getImgUri() . "\n"
+            ."Height: " . $this->getHeight() . ", Width: " . $this->getWidth() ."\n"
+            ."Format: " . $this->getFormat();
     }
 }

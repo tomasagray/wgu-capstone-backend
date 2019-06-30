@@ -22,6 +22,14 @@ class Log
         self::write_log($elog_file, $log_msg);
     }
 
+    public static function s($msg) {
+        $slog_file = "sec_" . self::$log_file;
+        $log_msg = "[SECURITY]: " . $msg . "\n";
+
+        self::write_log($slog_file, $log_msg);
+    }
+
+    // Write log data to disk
     private static function write_log($log_file, $msg) {
         file_put_contents(
             self::$log_root . $log_file,
